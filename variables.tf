@@ -10,7 +10,27 @@
 # map (or object): a group of values identified by named labels, like {name = "Mabel", age = 52}.
 
 # Default types are stings, lists, and maps
+variable "region" {}
+variable "tag-name" {}
 
+variable "imageid" {}
+variable "instance-type" {}
+variable "key-name" {}
+
+variable "asg-name" {}
+variable "elb-name" {}
+variable "tg-name" {}
+
+variable "raw-s3-bucket" {}
+variable "finished-s3-bucket" {}
+
+variable "sqs-name" {}
+variable "dynamodb-name" {}
+
+variable "desired" {}
+variable "min" {}
+variable "max" {}
+variable "number-of-azs" {}
 variable "imageid" {}
 variable "instance-type" {}
 variable "key-name" {}
