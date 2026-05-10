@@ -4,6 +4,14 @@ const app = express();
 const multer = require("multer");
 const multerS3 = require("multer-s3");
 
+const {
+  ListTablesCommand,
+  DynamoDBClient,
+  ScanCommand,
+  PutItemCommand,
+  QueryCommand
+} = require("@aws-sdk/client-dynamodb");
+
 const { 
   S3Client, 
   ListBucketsCommand, 
