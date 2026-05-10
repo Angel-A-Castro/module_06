@@ -40,7 +40,7 @@ sudo npm install pm2 -g
 ####################################################################
 # Note - change "hajek.git" to be your private repo name (hawk ID) #
 ####################################################################
-sudo -u ubuntu git clone sudo -u ubuntu git clone https://github.com/Angel-A-Castro/module_06.git
+sudo -u ubuntu git clone https://github.com/Angel-A-Castro/module_06.git
 
 # Start the nodejs app where it is located via PM2
 # https://pm2.keymetrics.io/docs/usage/quick-start
