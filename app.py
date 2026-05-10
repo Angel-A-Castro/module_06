@@ -139,6 +139,16 @@ if messagesInQueue == True:
 
     print(str(responsePresigned))
 
+    table.update_item(
+    Key={
+        "RecordNumber": str(record_number)
+    },
+    UpdateExpression="SET RAWS3URL = :done, FINSHIEDURL = :finished",
+    ExpressionAttributeValues={
+        ":done": "done",
+        ":finished": responsePresigned
+    }
+)
     ###################################################################
     # Add Dynamo Update code
     # https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/dynamodb/client/update_item.html
