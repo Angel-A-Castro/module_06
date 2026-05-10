@@ -519,6 +519,21 @@ resource "aws_sqs_queue" "coursera_queue" {
   }
 }
 
+resource "aws_dynamodb_table" "company" {
+  name         = var.dynamodb-name
+  billing_mode = "PAY_PER_REQUEST"
+  hash_key     = "RecordNumber"
+
+  attribute {
+    name = "RecordNumber"
+    type = "S"
+  }
+
+  tags = {
+    Name = var.tag-name
+  }
+}
+
 # Create SNS Topics
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sns_topic
 resource "aws_sns_topic" "user_updates" {
