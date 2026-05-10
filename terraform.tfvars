@@ -18,4 +18,24 @@ region                 = "us-east-2"
 raw-s3-bucket          = "jrh-raw-bucket"
 finished-s3-bucket     = "jrh-finished-bucket"
 sqs-name               = "jrh-sqs"
+region = "us-east-2"
+tag-name = "module-06"
 
+imageid = "ami-0d42fcd0853715ddb"
+instance-type = "t3.micro"
+key-name = "module-05-key"
+
+asg-name = "module-06-asg"
+elb-name = "module-06-lb"
+tg-name = "module-06-tg"
+
+raw-s3-bucket = "angelcastro-module06-raw"
+finished-s3-bucket = "angelcastro-module06-finished"
+
+sqs-name = "module-06-queue"
+dynamodb-name = "company"
+
+desired = 3
+min = 3
+max = 3
+number-of-azs = 3
