@@ -15,7 +15,10 @@ region = 'us-east-2'
 
 # https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/sqs.html
 clientSQS = boto3.client('sqs',region_name=region)
-clientrds = boto3.client('rds',region_name=region)
+dynamodb = boto3.resource("dynamodb", region_name=region)
+responseDynamo = boto3.client("dynamodb", region_name=region)
+responseDynamoTables = responseDynamo.list_tables()
+table = dynamodb.Table("company")
 clientSNS = boto3.client('sns',region_name=region)
 # https://github.com/boto/boto3/issues/1644
 # Needed to help generate pre-signed URLs
